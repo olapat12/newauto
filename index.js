@@ -56,6 +56,6 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    client.send(JSON.stringify({"Live reading":"greetings from the server"}));
+    client.send(JSON.stringify('greeting from the server'));
   });
 }, 5000);
