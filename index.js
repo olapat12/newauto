@@ -56,6 +56,6 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    client.send(JSON.stringify({fuelLevel : "10litres", speed: '270km'}));
+    client.send(JSON.stringify({level : "10litres", temp: '270km'}));
   });
 }, 5000);
