@@ -30,7 +30,7 @@ wss.on('connection', (ws) => {
     var objectt = JSON.parse(data);
         
     const cardata = new Car({
-        fuelLevel: objectt.fuelLevel,
+        fuelLevel: objectt.level,
         speed: objectt.speed
     })
     try {
