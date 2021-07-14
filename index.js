@@ -4,8 +4,9 @@ const express = require('express');
 const { Server } = require('ws');
 const Car = require('./car')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const app = express()
-
+app.use(cors())
 mongoose.connect('mongodb+srv://olajide:tech10@cluster0.4x6cv.mongodb.net/catholic?retryWrites=true&w=majority', 
     { useNewUrlParser: true },
     ()=> console.log('connected to db'));
